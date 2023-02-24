@@ -21,8 +21,11 @@ import com.example.demo.entity.Employee;
 	}
 	public void deleteDepartmentById(int id)
 	{
-		emp.deleteById(id);
+	 emp.deleteById(id);
 	}
 	
+	public Employee update(int id, Employee e) {
+		return emp.saveAndFlush(e);
+	}
 	}
 
